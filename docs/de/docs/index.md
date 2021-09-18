@@ -417,7 +417,7 @@ Try changing the line with:
 
 For a more complete example including more features, see the <a href="https://fastapi.tiangolo.com/tutorial/">Tutorial - User Guide</a>.
 
-**Spoiler alert**: the tutorial - user guide includes:
+**Spoileralarm**: Das Tutorial - user guide includes:
 
 * Declaration of **parameters** from other different places as: **headers**, **cookies**, **form fields** and **files**.
 * How to set **validation constraints** as `maximum_length` or `regex`.
@@ -440,10 +440,10 @@ To understand more about it, see the section <a href="https://fastapi.tiangolo.c
 
 ## Optional Dependencies
 
-Used by Pydantic:
+Benutzt von Pydantic:
 
-* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - for faster JSON <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>.
-* <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email_validator</code></a> - for email validation.
+* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - für schnelleres JSON <abbr title="converting the string that comes from an HTTP request into Python data">"verarbeiten"</abbr>.
+* <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email_validator</code></a> - for email-Überprüfung.
 
 Benutzt von Starlette:
 
