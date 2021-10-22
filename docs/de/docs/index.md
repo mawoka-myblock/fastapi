@@ -43,7 +43,7 @@ Die Haupt-Features sind:
 * **Robust**: Bekomme produktionsreifen Code mit automatischer, interaktiver Dokumentation.
 * **Basiert auf Standards**: Basiert auf (und is völlig kompatible mit) den Offenen Standards für APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (früher bekannt als Swagger) und dem <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
 
-<small>* basierend auf Tests eines internen Entwickler-Teams, welches produktionsreife Applicationen programmiert.</small>
+<small>* basierend auf Tests eines internen Entwickler-Teams, welches produktionsreife Applikationen programmiert.</small>
 
 ## Sponsoren
 
@@ -322,13 +322,13 @@ Und nun, gehe zu <a href="http://127.0.0.1:8000/redoc" class="external-link" tar
 
 ### Wiederholung
 
-In summary, you declare **once** the types of parameters, body, etc. as function parameters. 
+Zusammenfassend deklarierst du die Typen der Parameters, des Bodys **nur einmal** als Funktions-Parameter.
 
-You do that with standard modern Python types.
+Du machst das mit modernen Python-Typen.
 
-You don't have to learn a new syntax, the methods or classes of a specific library, etc.
+Du musst dafür fast nichts neues lernen.
 
-Einfach standard **Python 3.6+**.
+Einfach standart **Python 3.6+**.
 
 zum Beispiel, ein `int` (Zahl):
 
@@ -372,23 +372,22 @@ item: Item
 
 Um auf das vorherige Codebeispiel zurückzukommen, wird **FastAPI**:
 
-* Überprüft dass da ein `item_id` im Pfad von den `GET` und `PUT`-Anfragen ist.
+* Überprüft, dass da ein `item_id` im Pfad von den `GET` und `PUT`-Anfragen ist.
 * Überprüft, dass `item_id` ein `int` für `GET` und `PUT`-Anfragen ist.
     * Wenn diese Überprüfung fehlschlägt, sieht der Client einen klaren, verständlichen Fehler.
 * Überprüft ob der optionale Parameter `q` (wie in `http://127.0.0.1:8000/items/foo?q=somequery`) für `GET`-Anfragen existiert.
     * As the `q` parameter is declared with `= None`, it is optional.
     * Without the `None` it would be required (as is the body in the case with `PUT`).
-* For `PUT` requests to `/items/{item_id}`, Read the body as JSON:
-    * Check that it has a required attribute `name` that should be a `str`. 
-    * Check that it has a required attribute `price` that has to be a `float`.
-    * Check that it has an optional attribute `is_offer`, that should be a `bool`, if present.
-    * All this would also work for deeply nested JSON objects.
+* Für `PUT`-Anfragen an `/items/{item_id}`, liest FastAPI den Body als JSON. FastAPI:
+    * überprüft, ob das erforderliche Attribut `name` ein `str` ist,
+    * überprüft, ob das erforderliche Attribut `price` ein `float` ist,
+    * überprüft, ob das optionale Attribut `is_offer` ein `bool` ist, wenn es vorhanden ist.
+    * All das würde auch für tief verschachtelte JSON-Objekte funkionieren.
+* alles von und nach JSON automatisch konvertieren.
+* alles automatisch mit OpenAPI dokumentieren, für:
+  * Interaktive API-Dokumentationen.
+  * Automatische Client-Code-Generations-Systeme.
 * Convert from and to JSON automatically.
-* Document everything with OpenAPI, that can be used by:
-    * Interactive documentation systems.
-    * Automatic client code generation systems, for many languages.
-* Provide 2 interactive documentation web interfaces directly.
-
 ---
 
 We just scratched the surface, but you already get the idea of how it all works.

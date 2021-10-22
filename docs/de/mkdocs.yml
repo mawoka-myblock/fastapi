@@ -91,7 +91,7 @@ extra:
   - link: /
     name: en - English
   - link: /de/
-    name: de
+    name: de - Deutsch
   - link: /es/
     name: es - español
   - link: /fr/
